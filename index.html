@@ -7,80 +7,91 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Additions for responsive design */
-			@media (max-width: 768px) {
-				/* General: Make text and layout mobile-friendly */
-				body {
-					font-size: 14px;
-				}
+			/* General Styles */
+			body {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-				header h1 {
-					font-size: 1.8em;
-				}
+			/* Mobile-First Styling */
+			.scroll-container {
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				gap: 16px;
+				padding: 16px;
+				width: 100%;
+				box-sizing: border-box;
+			}
 
-				header p {
-					font-size: 0.9em;
-				}
+			.scroll-item {
+				flex: 0 0 90%;
+				scroll-snap-align: center;
+				background: #f9f9f9;
+				border-radius: 8px;
+				padding: 16px;
+				text-align: center;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
 
-				/* Horizontal Scroll Section: Mobile adjustments */
-				.scroll-container {
-					display: flex;
-					overflow-x: auto; /* Enable horizontal scrolling */
-					scroll-snap-type: x mandatory;
-					gap: 8px; /* Reduce gap between items */
-					padding: 10px; /* Add padding for better visuals */
-				}
+			.scroll-item img {
+				width: 100%;
+				max-width: 150px;
+				height: auto;
+				margin-bottom: 1em;
+			}
 
+			.scroll-item h3 {
+				font-size: 1.2em;
+				margin: 0.5em 0;
+			}
+
+			.scroll-item p {
+				font-size: 0.9em;
+				color: #555;
+			}
+
+			/* For Tablets (min-width: 768px) */
+			@media (min-width: 768px) {
 				.scroll-item {
-					flex: 0 0 80%; /* Reduce item size for mobile */
-					padding: 15px;
+					flex: 0 0 45%; /* Show two items per row */
 				}
 
-				.scroll-item img {
-					width: 100%; /* Full width of container */
-					max-width: 200px; /* Limit image size for smaller screens */
-				}
-
-				.scroll-item h3 {
-					font-size: 1.2em;
-				}
-
-				.scroll-item p {
-					font-size: 0.9em;
+				.scroll-container {
+					gap: 24px;
 				}
 			}
 
-			@media (max-width: 480px) {
-				/* For smaller phones */
-				.scroll-container {
-					gap: 4px; /* Further reduce gap */
-				}
-
+			/* For Desktop (min-width: 1024px) */
+			@media (min-width: 1024px) {
 				.scroll-item {
-					flex: 0 0 90%; /* Almost full width */
+					flex: 0 0 30%; /* Show three items per row */
 				}
-
-				.scroll-item img {
-					max-width: 150px; /* Further limit image size */
+				.scroll-container {
+					gap: 32px;
 				}
+			}
 
+			/* Header Responsive Adjustments */
+			header h1 {
+				font-size: 2em;
+				margin: 0.5em 0;
+			}
+
+			header p {
+				font-size: 1em;
+				line-height: 1.6;
+				text-align: justify;
+			}
+
+			@media (max-width: 480px) {
 				header h1 {
 					font-size: 1.5em;
 				}
 
 				header p {
-					font-size: 0.8em;
-				}
-			}
-
-			/* Additional Enhancements for Desktop */
-			@media (min-width: 769px) {
-				.scroll-container {
-					overflow-x: hidden; /* Hide scrollbar on desktop */
-				}
-
-				.scroll-item {
-					flex: 0 0 30%; /* Show 3 items per row */
+					font-size: 0.9em;
 				}
 			}
 		</style>
@@ -94,7 +105,7 @@
 			<header id="header" class="alt">
 				<span class="logo"><img src="images/cc.svg" alt="" /></span>
 				<h1>Kushal KC</h1>
-				<p>IT Support Engineer | System Installation & Troubleshooting Expert | Skilled in Network Management, Customer Support, & System Upgrades | Passionate about Enhancing Operational Efficiency<br />
+				<p>IT Support Engineer | System Installation & Troubleshooting Expert | Skilled in Network Management, Customer Support, & System Upgrades | Passionate about Enhancing Operational Efficiency</p>
 			</header>
 
 			<!-- Nav -->
@@ -124,23 +135,24 @@
 					</div>
 				</section>
 
-				<!-- First Section -->
+				<!-- Projects -->
 				<section id="Projects" class="main special">
 					<header class="major">
-						<h2>My Projects </h2>
+						<h2>My Projects</h2>
 					</header>
 					<span class="image"><img src="images/az.svg" alt="Azure Logo" style="width: 250px; height: auto;" /></span>
-					<h3>Azure Administration </h3>
-					<p style="text-align: justify;">The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services. This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.</p>
+					<h3>Azure Administration</h3>
+					<p style="text-align: justify;">
+						The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services. This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.
+					</p>
 					<h4><a href="generic.html" class="button">Learn More</a></h4>
 
-					<!-- Horizontal Scrolling Section -->
+					<!-- Horizontal Scroll Section -->
 					<section id="horizontal-scroll" class="main special">
 						<header class="major">
-							<section id="Recommendation" class="main special"></section>
 							<h2>Recommendation</h2>
 						</header>
-						<div class="scroll-container" id="scroll-container">
+						<div class="scroll-container">
 							<div class="scroll-item larger-image">
 								<img src="images/recommendation.png" alt="Recommendation">
 							</div>
