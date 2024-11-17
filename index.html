@@ -1,211 +1,179 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title> Portifolio</title>
+		<title>Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<style>
-		/* Horizontal Scroll Section Styling */
-		.scroll-container {
-			display: flex;
-			overflow-x: hidden; /* Hide the scrollbar */
-			scroll-snap-type: x mandatory; /* Enable snapping */
-			width: 100%; /* Full width for the section */
-			position: relative;
-			margin-top: 2em;
-			gap: 16px; /* Space between items */
-		}
+		<style>
+			/* Additions for responsive design */
+			@media (max-width: 768px) {
+				/* General: Make text and layout mobile-friendly */
+				body {
+					font-size: 14px;
+				}
 
-		.scroll-item {
-			flex: 0 0 100%; /* Each item takes full width of viewport */
-			scroll-snap-align: center; /* Snap items to the center */
-			padding: 20px;
-			background: #f9f9f9;
-			border-radius: 8px;
-			text-align: center;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		}
+				header h1 {
+					font-size: 1.8em;
+				}
 
-		.scroll-item img {
-			width: 150px;
-			height: auto;
-			margin-bottom: 1em;
-		}
+				header p {
+					font-size: 0.9em;
+				}
 
-		.scroll-item h3 {
-			font-size: 1.5em;
-			margin: 0.5em 0;
-		}
+				/* Horizontal Scroll Section: Mobile adjustments */
+				.scroll-container {
+					display: flex;
+					overflow-x: auto; /* Enable horizontal scrolling */
+					scroll-snap-type: x mandatory;
+					gap: 8px; /* Reduce gap between items */
+					padding: 10px; /* Add padding for better visuals */
+				}
 
-		.scroll-item p {
-			color: #555;
-			font-size: 1em;
-		}
-	</style>
-</head>
-<body class="is-preload">
+				.scroll-item {
+					flex: 0 0 80%; /* Reduce item size for mobile */
+					padding: 15px;
+				}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+				.scroll-item img {
+					width: 100%; /* Full width of container */
+					max-width: 200px; /* Limit image size for smaller screens */
+				}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/cc.svg" alt="" /></span>
-						<h1>Kushal KC</h1>
-						<p>IT Support Engineer | System Installation & Troubleshooting Expert | Skilled in Network Management, Customer Support, & System Upgrades | Passionate about Enhancing Operational Efficiency<br />
-					</header>
+				.scroll-item h3 {
+					font-size: 1.2em;
+				}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#Projects">My Project</a></li>
-							<li><a href="#Recommendation">Recommendation</a></li>
-							
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Experienced IT Support Engineer | Network & System Troubleshooter | Customer Service Advocate.</h2>
-										</header>
-										<p style="text-align: justify;">
-											I’m Kushal KC, a detail-oriented IT Support Engineer with a strong foundation in troubleshooting, system installation, and customer service. With hands-on experience at SITA Information Technology, I’m skilled in managing Active Directory, M365, and networking protocols such as TCP/IP and DHCP. My expertise extends to providing on-site technical support, enhancing network security, and maintaining smooth system operations. I am committed to delivering efficient, high-quality IT solutions that improve user satisfaction and operational performance.
-										</p>
-										
-									</div>
-									<span class="image" style="position: relative; bottom: -70px;"><img src="images/kus.jpg" alt="" /></span>
-								</div>
-							</section>
-
-						<!-- First Section -->
-							<section id="Projects" class="main special">
-								<header class="major">
-									<h2>My Projects </h2>
-								</header>
-
-										<span class="image"><img src="images/az.svg" alt="Azure Logo" style="width: 250px; height: auto;" /></span>
-
-										<h3>Azure Administration </h3>
-										<p style="text-align: justify;"></pstyle>The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services.This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.</p>
-									<h4><a href="generic.html" class="button">Learn More</a></h4>
-									<!-- Horizontal Scrolling Section -->
-									
-									<section id="horizontal-scroll" class="main special">
-										<header class="major">
-											<section id="Recommendation" class="main special"></section>
-											<h2>Recommendation</h2>
-										</header>
-										<div class="scroll-container" id="scroll-container">
-											<div class="scroll-item larger-image">
-												<img src="images/recommendation.png" alt="Recommendation">
-											</div>
-											<div class="scroll-item">
-												<img src="images/project2.jpg" alt="Project 2">
-											</div>
-											<div class="scroll-item">
-												<img src="images/project3.jpg" alt="Project 3">
-											</div>
-										</div>
-									</section>
-									
-											
-											
-
-											<!-- Auto Scroll Script -->
-		<script>
-			const scrollContainer = document.getElementById("scroll-container");
-			let scrollInterval;
-
-			function startAutoScroll() {
-				const scrollAmount = scrollContainer.offsetWidth; // Scroll by one item
-				let currentScrollPosition = 0;
-
-				scrollInterval = setInterval(() => {
-					currentScrollPosition += scrollAmount;
-					if (currentScrollPosition >= scrollContainer.scrollWidth) {
-						currentScrollPosition = 0;
-					}
-					scrollContainer.scrollTo({
-						left: currentScrollPosition,
-						behavior: "smooth",
-					});
-				}, 3000); // Scroll every 3 seconds
+				.scroll-item p {
+					font-size: 0.9em;
+				}
 			}
 
-			startAutoScroll();
-		</script>
-									<!-- </li>
-									if adding new project just use this code. 
-									<section id="Projects" class="main special">
-								<header class="major">
-									<h2>My Projects </h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="image"><img src="images/az.svg" alt="Azure Logo" style="width: 250px; height: auto;" /></span>
+			@media (max-width: 480px) {
+				/* For smaller phones */
+				.scroll-container {
+					gap: 4px; /* Further reduce gap */
+				}
 
-										<h3>Azure Administration </h3>
-										<p style="text-align: center;"></pstyle>The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services.This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.</p>
-									<h4><li><a href="generic.html" class="button">Learn More</a></li></h4>
-									</li> 
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>-->
-							
-										</div>
-									</div>
-							</section>
+				.scroll-item {
+					flex: 0 0 90%; /* Almost full width */
+				}
 
+				.scroll-item img {
+					max-width: 150px; /* Further limit image size */
+				}
 
-						
-				
-			                   </div>
-			                  <!-- Footer -->
-			                    <footer id="footer">
-					
-			                    </section>
-			                     <section>
-				                 <h2>Etiam feugiat</h2>
-				                 <dl class="alt">
-				               		<dt>Address</dt>
-								<dd>Adelaide South Austraila</dd>
-								<dt>Phone</dt>
-								<dd>0426170438</dd>
-								<dt>Email</dt>
-								<dd><a href="#">kushalkc300@gmail.com</a></dd>
-								</dl>
-								<ul class="icons">
-								
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-								</ul>
-								</section>
-								
-							</footer>
+				header h1 {
+					font-size: 1.5em;
+				}
 
-							<!-- Scripts -->
+				header p {
+					font-size: 0.8em;
+				}
+			}
+
+			/* Additional Enhancements for Desktop */
+			@media (min-width: 769px) {
+				.scroll-container {
+					overflow-x: hidden; /* Hide scrollbar on desktop */
+				}
+
+				.scroll-item {
+					flex: 0 0 30%; /* Show 3 items per row */
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<span class="logo"><img src="images/cc.svg" alt="" /></span>
+				<h1>Kushal KC</h1>
+				<p>IT Support Engineer | System Installation & Troubleshooting Expert | Skilled in Network Management, Customer Support, & System Upgrades | Passionate about Enhancing Operational Efficiency<br />
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#intro" class="active">Introduction</a></li>
+					<li><a href="#Projects">My Project</a></li>
+					<li><a href="#Recommendation">Recommendation</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Introduction -->
+				<section id="intro" class="main">
+					<div class="spotlight">
+						<div class="content">
+							<header class="major">
+								<h2>Experienced IT Support Engineer | Network & System Troubleshooter | Customer Service Advocate.</h2>
+							</header>
+							<p style="text-align: justify;">
+								I’m Kushal KC, a detail-oriented IT Support Engineer with a strong foundation in troubleshooting, system installation, and customer service. With hands-on experience at SITA Information Technology, I’m skilled in managing Active Directory, M365, and networking protocols such as TCP/IP and DHCP. My expertise extends to providing on-site technical support, enhancing network security, and maintaining smooth system operations. I am committed to delivering efficient, high-quality IT solutions that improve user satisfaction and operational performance.
+							</p>
+						</div>
+						<span class="image" style="position: relative; bottom: -70px;"><img src="images/kus.jpg" alt="" /></span>
+					</div>
+				</section>
+
+				<!-- First Section -->
+				<section id="Projects" class="main special">
+					<header class="major">
+						<h2>My Projects </h2>
+					</header>
+					<span class="image"><img src="images/az.svg" alt="Azure Logo" style="width: 250px; height: auto;" /></span>
+					<h3>Azure Administration </h3>
+					<p style="text-align: justify;">The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services. This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.</p>
+					<h4><a href="generic.html" class="button">Learn More</a></h4>
+
+					<!-- Horizontal Scrolling Section -->
+					<section id="horizontal-scroll" class="main special">
+						<header class="major">
+							<section id="Recommendation" class="main special"></section>
+							<h2>Recommendation</h2>
+						</header>
+						<div class="scroll-container" id="scroll-container">
+							<div class="scroll-item larger-image">
+								<img src="images/recommendation.png" alt="Recommendation">
+							</div>
+							<div class="scroll-item">
+								<img src="images/project2.jpg" alt="Project 2">
+							</div>
+							<div class="scroll-item">
+								<img src="images/project3.jpg" alt="Project 3">
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<h2>Contact Information</h2>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>Adelaide, South Australia</dd>
+						<dt>Phone</dt>
+						<dd>0426170438</dd>
+						<dt>Email</dt>
+						<dd><a href="#">kushalkc300@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+					</ul>
+				</section>
+			</footer>
+
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -213,7 +181,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
-
+		</div>
 	</body>
 </html>
