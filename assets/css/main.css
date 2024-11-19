@@ -3798,7 +3798,7 @@ input, select, textarea {
 .auto-scroll-container-inner {
     display: flex;
     width: 300%; /* Total width = 100% x number of images */
-    animation: scroll-images 9s infinite; /* 3 images x 3 seconds each */
+    animation: scroll-images 15s infinite; /* 3 images x 3 seconds each */
 }
 
 /* Individual image container */
