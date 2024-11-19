@@ -3783,20 +3783,47 @@ input, select, textarea {
 			}
 
 		}
-/* Style for the recommendation image container */
+
+
+/* Auto-scroll container */
+.auto-scroll-container {
+    display: flex;
+    overflow: hidden; /* Ensure images stay within the container */
+    width: 100%; /* Full width of the parent container */
+    height: 250px; /* Set a height for the container */
+    position: relative;
+}
+
+/* Image wrapper */
+.auto-scroll-container-inner {
+    display: flex;
+    width: 300%; /* Total width = 100% x number of images */
+    animation: scroll-images 9s infinite; /* 3 images x 3 seconds each */
+}
+
+/* Individual image container */
 .image-container {
-	width: 90%; /* Adjust width for responsiveness */
-	max-width: 800px; /* Maximum width for larger screens */
-	margin: 20px auto; /* Center the image with spacing */
-	text-align: center; /* Center the content */
-  }
-  
-  /* Style for the recommendation image */
-  .image-container img {
-	width: 100%; /* Make the image scale with the container */
-	height: auto; /* Maintain the image's aspect ratio */
-	border: 2px solid #ccc; /* Optional: Add a border for styling */
-	border-radius: 10px; /* Optional: Rounded corners */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-  }
-  
+    flex: 0 0 100%; /* Each image takes 100% of the container width */
+    height: 100%; /* Ensure the container height fits the images */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%; /* Image spans the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the container fully */
+}
+
+/* Keyframes for sliding effect */
+@keyframes scroll-images {
+    0%, 33.33% {
+        transform: translateX(0); /* First image in view */
+    }
+    33.34%, 66.66% {
+        transform: translateX(-100%); /* Second image in view */
+    }
+    66.67%, 100% {
+        transform: translateX(-200%); /* Third image in view */
+    }
+}
+
