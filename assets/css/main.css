@@ -3783,36 +3783,20 @@ input, select, textarea {
 			}
 
 		}
-
-		
-		<style>
-		/* General Styling for Horizontal Scroll Section */
-		.scroll-container {
-			display: flex;
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
-			gap: 16px; /* Space between items */
-		}
-	
-		.scroll-item {
-			flex: 0 0 100%; /* Each item takes full width */
-			scroll-snap-align: center;
-			text-align: center;
-			padding: 20px;
-			background: #f9f9f9;
-			border-radius: 8px;
-		}
-	
-		.scroll-item img {
-			width: 250px; /* Default size for all images */
-			height: auto;
-			border-radius: 8px;
-		}
-	
-		/* Specific Styling for recommendation.png */
-		.scroll-item.larger-image img {
-			width: 1100px; /* Larger size for the first image */
-			height: auto; /* Maintain aspect ratio */
-		}
-	</style>
-	
+/* Style for the recommendation image container */
+.image-container {
+	width: 90%; /* Adjust width for responsiveness */
+	max-width: 800px; /* Maximum width for larger screens */
+	margin: 20px auto; /* Center the image with spacing */
+	text-align: center; /* Center the content */
+  }
+  
+  /* Style for the recommendation image */
+  .image-container img {
+	width: 100%; /* Make the image scale with the container */
+	height: auto; /* Maintain the image's aspect ratio */
+	border: 2px solid #ccc; /* Optional: Add a border for styling */
+	border-radius: 10px; /* Optional: Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  }
+  
