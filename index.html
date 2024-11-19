@@ -6,95 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* General Styles */
-			body {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
-
-			/* Mobile-First Styling */
-			.scroll-container {
-				display: flex;
-				overflow-x: auto;
-				scroll-snap-type: x mandatory;
-				gap: 16px;
-				padding: 16px;
-				width: 100%;
-				box-sizing: border-box;
-			}
-
-			.scroll-item {
-				flex: 0 0 90%;
-				scroll-snap-align: center;
-				background: #f9f9f9;
-				border-radius: 8px;
-				padding: 16px;
-				text-align: center;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			}
-
-			.scroll-item img {
-				width: 100%;
-				max-width: 150px;
-				height: auto;
-				margin-bottom: 1em;
-			}
-
-			.scroll-item h3 {
-				font-size: 1.2em;
-				margin: 0.5em 0;
-			}
-
-			.scroll-item p {
-				font-size: 0.9em;
-				color: #555;
-			}
-
-			/* For Tablets (min-width: 768px) */
-			@media (min-width: 768px) {
-				.scroll-item {
-					flex: 0 0 45%; /* Show two items per row */
-				}
-
-				.scroll-container {
-					gap: 24px;
-				}
-			}
-
-			/* For Desktop (min-width: 1024px) */
-			@media (min-width: 1024px) {
-				.scroll-item {
-					flex: 0 0 30%; /* Show three items per row */
-				}
-				.scroll-container {
-					gap: 32px;
-				}
-			}
-
-			/* Header Responsive Adjustments */
-			header h1 {
-				font-size: 2em;
-				margin: 0.5em 0;
-			}
-
-			header p {
-				font-size: 1em;
-				line-height: 1.6;
-				text-align: justify;
-			}
-
-			@media (max-width: 480px) {
-				header h1 {
-					font-size: 1.5em;
-				}
-
-				header p {
-					font-size: 0.9em;
-				}
-			}
-		</style>
+		
 	</head>
 	<body class="is-preload">
 
@@ -113,7 +25,7 @@
 				<ul>
 					<li><a href="#intro" class="active">Introduction</a></li>
 					<li><a href="#Projects">My Project</a></li>
-					<li><a href="#Recommendation">Recommendation</a></li>
+					<li><a href="#recommendation">Recommendation</a></li>
 				</ul>
 			</nav>
 
@@ -146,21 +58,14 @@
 						The Azure Administration Documentation provides essential information, guidelines, and resources for managing and configuring Microsoft Azure services. This documentation is aimed at Azure administrators who are responsible for the day-to-day operations of Azure environments, helping them optimize performance, monitor system health, and troubleshoot issues effectively.
 					</p>
 					<h4><a href="generic.html" class="button">Learn More</a></h4>
-
-					<!-- Horizontal Scroll Section -->
 					<section id="horizontal-scroll" class="main special">
+						<section id="recommendation" class="main special"></section>
 						<header class="major">
 							<h2>Recommendation</h2>
 						</header>
 						<div class="scroll-container">
 							<div class="scroll-item larger-image">
 								<img src="images/recommendation.png" alt="Recommendation">
-							</div>
-							<div class="scroll-item">
-								<img src="images/project2.jpg" alt="Project 2">
-							</div>
-							<div class="scroll-item">
-								<img src="images/project3.jpg" alt="Project 3">
 							</div>
 						</div>
 					</section>
