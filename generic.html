@@ -1,12 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
+		<title>Azure Administration - How to Create a New User</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,8 +15,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<span class="image"><img src="images/az.svg" alt="Azure Logo" style="width: 250px; height: auto;" /></span>
+						<h1>Azure Administration</h1> 
 					</header>
 
 				<!-- Main -->
@@ -28,49 +24,69 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<h2>How to Create a New User in Azure</h2>
+
+								
+								<h3>Prerequisites</h3>
+								<ul>
+									<li><strong>Global Administrator</strong> or <strong>User Administrator</strong> role in Azure AD.</li>
+									<li>Access to the <strong>Azure portal</strong>.</li>
+									<li>An active <strong>Azure subscription</strong>.</li>
+								</ul>
+
+								<h3>Steps to Create a User in Azure Entra ID</h3>
+								<ol>
+									<li><strong>Sign in to Azure Portal:</strong> Open your browser and go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in using your administrator credentials.</li>
+									<li><strong>Navigate to Azure Active Directory:</strong> In the Azure portal, click on <strong>Azure Active Directory</strong> from the left-hand sidebar. If you cannot see it, use the search bar at the top to search for it.</li>
+									<li><strong>Create a New User:</strong> Under Azure Active Directory, click <strong>Users</strong>, then click the <strong>+ New user</strong> button.</li>
+									<li><strong>Fill in User Information:</strong> 
+										<ul>
+											<li><strong>Identity:</strong> Select between Create user (for a new user) or Invite user (for external users).</li>
+											<li><strong>Name:</strong> Enter the full name of the user.</li>
+											<li><strong>Role:</strong> Select the user role (typically User by default).</li>
+										</ul>
+									</li>
+									<li><strong>Set Password:</strong> Choose to auto-generate or manually set the user's password. Ensure the password complies with Azure’s security policy. Optionally, check <strong>User must change password at next sign-in</strong>.</li>
+									<li><strong>Assign Licenses:</strong> Under Assigned licenses, click <strong>+ Assign</strong> and choose any relevant licenses, such as Office 365.</li>
+									<li><strong>Assign Groups (Optional):</strong> Add the user to specific groups if required.</li>
+									<li><strong>Review and Create:</strong> Once all information is reviewed, click <strong>Create</strong> to finalize user creation.</li>
+								</ol>
+								
+								<h3>Managing Users</h3>
+								<ul>
+									<li>Reset password, update profile information, and assign or revoke roles as needed.</li>
+									<li>Enable or disable user access to specific resources.</li>
+								</ul>
+								
+								<h3>Troubleshooting</h3>
+								<ul>
+									<li><strong>User Creation Failed:</strong> Ensure that the username is unique.</li>
+									<li><strong>Password Issues:</strong> Verify the password policy and reset if necessary.</li>
+								</ul>
 							</section>
 
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+			<footer id="footer" >
+				<section>
+					<h2 >Lets get connected</h2>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>Adelaide, South Australia</dd>
+						<dt>Phone</dt>
+						<dd>0426170438</dd>
+						<dt>Email</dt>
+						<dd><a href="#">kushalkc300@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li> <a aria-label="linkedin" href="https://www.linkedin.com/in/kushalkckus/" class="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewbox="0 0 24 24" width="20" id="linkedin"><path fill="var(--svg-color)" d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"></path></svg></a>
+						</li>
+					</ul>
+				</section>
+			</footer>
 
-			</div>
-
-		<!-- Scripts -->
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -78,6 +94,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+		</div>
 	</body>
 </html>
